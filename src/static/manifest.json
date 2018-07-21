@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+
+	"name": "Nico Plus",
+	"description": "",
+	"version": "0.0.1",
+
+	"content_scripts": [{
+		"matches": [
+			"*://www.nicovideo.jp/**/*"
+		],
+		"js": [
+			"contentScript.js"
+		]
+	}],
+	"web_accessible_resources": [
+		"www.nicovideo.jp"
+	],
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"browser_action": {
+	}
+}

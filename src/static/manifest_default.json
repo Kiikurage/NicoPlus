@@ -1,0 +1,35 @@
+{
+	"manifest_version": 2,
+
+	"name": "Nico Plus",
+	"description": "",
+	"version": "0.0.1",
+
+	"content_scripts": [{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": [
+			"contentScript.js"
+		]
+	}],
+	"web_accessible_resources": [
+		"*"
+	],
+	"options_page": "options.html",
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": true
+	},
+	"background": {
+		"scripts": [
+			"background.js"
+		]
+	},
+	"browser_action": {
+		"default_popup": "popup.html"
+	},
+	"permissions": [
+		"storage"
+	]
+}
